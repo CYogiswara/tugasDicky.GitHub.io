@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Eats</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: #080808;
+            overflow: hidden;
+            
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+    height: 200px; /* Set the desired height */
+    overflow: hidden;
+    background: url('hero-image.jpg') center center no-repeat;
+    background-size: cover;
+        }
+
+        .hero img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .hero-content {
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+
+        section {
+            padding: 20px;
+        }
+
+
+        h2 {
+            color: white;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+        }
+        
+        .menu-item p{
+            margin-left: 30px;
+        }
+
+        .menu-item h3{
+            margin-left: 20px;
+            width: 100px; /* Set your desired width */
+            border-radius: 4px;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .reservation-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section{
+            background-color: #403127;
+            color: white;
+        }
+
+        footer {
+            background-color: #2e231c;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav a.register {
+            float: right;
+            background-color:#1a1310; /* Choose your desired background color */
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            margin-right: 10px; /* Add some spacing to the right */
+            margin-top: 5px;
+    
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        nav a.register:hover {
+        background-color: #261c17; /* Change the background color on hover */
+        }
+        
+
+        .outlets-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .outlets {
+            width: 50%; /* Adjust the width as needed */
+        }
+
+        .opening-time {
+        flex: 1;
+        margin: 30px 20px;
+        font-size: 1.2em;
+        text-align: center;
+        }
+
+        .opening-time p span{
+        display: block;
+        }
+
+        .order-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #3498db;
+      color: #fff;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .order-button:hover {
+      background-color: #2980b9;
+    }
+
+    .box-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .box {
+      width: 300px;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .box-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .box-description {
+      font-size: 14px;
+    }
+
+    .box img {
+      width: 100%; /* Ensures the image takes up 100% of the container width */
+      height: auto;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <!-- <header>
+        <h1>Restaurant</h1>
+    </header> -->
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#reserve">Reservation</a>
+        <a href="#contact">Contact</a>
+        <a class="register">Register</a>
+    </nav>
+
+    
+
+    <div class="hero">
+        <img src="new.jpeg">
+        <div><h2>Welcome to Restaurant</h2>
+            <p>Good Food, Good Life</p>
+        </div>
+    </div>
+
+    <div class="opening-time">
+        <h3>
+          About Us
+        </h3>
+        <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, provident? Amet impedit odit, excepturi inventore blanditiis et eum exercitationem natus vel commodi doloremque quos animi unde aperiam dolor, perferendis molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi aspernatur nostrum quo eaque in sit esse temporibus mollitia dolor similique aut, perferendis, ratione, dolorem sed? Numquam voluptates explicabo repudiandae provident!
+        </p>
+      </div>
+
+
+    <section id="menu">
+        <h2>Our top-notch culinary selections</h2>
+
+        <div class="menu-item">
+            <img src="download (44).jpg" alt="Dish 1">
+            <div>
+                <h3>Dish 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Fuga repellendus odio totam rem a labore. Officiis expedita, ipsam facere ut laudantium a obcaecati tempora blanditiis quis, corporis tempore iure facilis!</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="download (44).jpg" alt="Dish 1">
+            <div>
+                <h3>Dish 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Fuga repellendus odio totam rem a labore. Officiis expedita, ipsam facere ut laudantium a obcaecati tempora blanditiis quis, corporis tempore iure facilis!</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="download (44).jpg" alt="Dish 1">
+            <div>
+                <h3>Dish 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Fuga repellendus odio totam rem a labore. Officiis expedita, ipsam facere ut laudantium a obcaecati tempora blanditiis quis, corporis tempore iure facilis!</p>
+            </div>
+        </div>
+
+        <!-- Add more menu items as needed -->
+
+    </section>
+
+    <div class="opening-time">
+        <h3>
+          Opening times
+        </h3>
+        <p>
+         <span>Monday—Thursday: 08:00 — 22:00</span> 
+         <span>Friday—Saturday: 09:00 — 23:00 </span>
+         <span>Sunday: 10:00 — 17:00</span>
+        </p>
+      </div>
+
+    <div class="opening-time">
+        <h3>
+            Outlets
+        </h3>
+        <div class="box-container">
+            <div class="box">
+              <img src="images.jpg">
+              <div class="box-title">Outlets</div>
+              <div class="box-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Fuga repellendus odio totam rem a labore. Officiis expedita, ipsam facere ut laudantium a obcaecati tempora blanditiis quis, corporis tempore iure facilis!</div>
+            </div>
+            <div class="box">
+              <img src="images.jpg">
+              <div class="box-title">Outlets</div>
+              <div class="box-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Fuga repellendus odio totam rem a labore. Officiis expedita, ipsam facere ut laudantium a obcaecati tempora blanditiis quis, corporis tempore iure facilis!</div>
+            </div>
+            <div class="box">
+              <img src="images.jpg">
+              <div class="box-title">Outlets</div>
+              <div class="box-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Fuga repellendus odio totam rem a labore. Officiis expedita, ipsam facere ut laudantium a obcaecati tempora blanditiis quis, corporis tempore iure facilis!</div>
+            </div>
+          </div>
+      </div>
+
+      <div class="opening-time">
+        <h3>
+            Our Services
+        </h3>
+        <div class="box-container">
+            <div class="box">
+              <img src="Catering.jpg">
+              <div class="box-title">Catering</div>
+              <div class="box-description">Catering is a specialized service that provides food and beverage provisions for various events and occasions.</div>
+              <a href="#" class="order-button">Order Here!</a>
+            </div>
+              
+            <div class="box">
+              <img src="et.jpg">
+              <div class="box-title">Buffet</div>
+              <div class="box-description">Buffet for events such as weddings, meetings, gatherings, etc</div>
+              <a href="#" class="order-button">Order Here!</a>
+            </div>
+            <div class="box">
+              <img src="guy.jpg">
+              <div class="box-title">Private Chef</div>
+              <div class="box-description">A private chef brings a personalized and exclusive culinary experience directly to the doorstep of discerning individuals or families.</div>
+              <a href="#" class="order-button">Order Here!</a>
+            </div>
+          </div>
+      </div>
+
+    <section class="reservation-form" id="reserve">
+        <h2>Make a Reservation</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or special requests? Feel free to contact us.</p>
+        <p>Email: info@Restau-rant.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+    </section>
+
+    <footer>
+        &copy; 2023 Restaurant. All rights reserved.
+    </footer>
+
+</body>
+</html>
